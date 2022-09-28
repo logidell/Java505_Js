@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var num1 = 10; // int num1 = 10;
+        var str1 = "문자"; // String str1 = " 문자 ";
+        var bool = true; // boolean bool = true;
+        var arr = [1, 2, 3, 4]; //int arr[] = [?];
+        var obj1 = {key1: " value1", key2: "ㅋㅋㅋㅋㅋ"};
+        var undefined1;
+        var nulls = null;
+        console.log(num1);
+        console.log(str1);
+        console.log(bool);
+        console.log(arr);
+        console.log(obj1);
+        console.log(undefined1);
+        console.log(nulls);
+
+        num1 = "숫자형 데이터 있던 곳에 문자열 넣기"
+        console.log(num1);
+
+        let num2 = 100;
+        const num3 = 1200;
+
+        let str2 = "두밧두와리와리"
+        const str3 = "const 사용 문자열"
+
+        let bool2 = false;
+        const bool3 = false;
+
+        let arr2 = [1, 2, 3];
+        const arr3 = [4, 5, 6];
+
+        let obj2 = {"key1": 100, tey2: true};
+        const obj3 = {key1: "와리와리", key2: "두밧두"}
+
+        let null2 = null
+        const null3 = null;
+
+        console.log(num2)
+        console.log(num3)
+        console.log(str2)
+        console.log(str3)
+        console.log(bool2)
+        console.log(bool3)
+        console.log(arr2)
+        console.log(arr3)
+        console.log(obj2)
+        console.log(obj3)
+        console.log(null2)
+        console.log(null3)
+
+        let undefined2; //변경가능하니 나중에 넣으면 되나 const는 변경불가
+        console.log(undefined2)
+        // const 상수 정의 키워드.
+        // const undefined3; // 상수로 선언후 데이터 초기화를 하지 않았으니 오류 발생.
+        // console.log(undefined3)
+
+        //    var : es6 버전 나오기 전까지 자바스크립트에서 변수를 선언시 사용하던 키워드, 변수가 메모리
+        //    상에 살아있는 범위가 함수를 기준으로 한다. 동일한 이름의 변수를 재정의 할 수 있다.
+        //
+        //    let : es6 버전에서 새로 추가된 변수선언 키워드. 변수가 메모리상에 살아있는 범위가 코드블럭 기준으로 한다.
+        //    동일한 이름의 변수를 재정의 할 수 없다.
+
+        //    const : es6 버전에서 새로 추가된 상수 선언 키워드. 상수가 메모리상에 살아있는 범위가 코드블럭 기준.
+
+        //js함수 사용 키워드
+        function func1() {
+            var varvalue1 = 10;
+            let letvalue1 = 10100;
+            if (true) {
+                var varvalue2 = 20;
+                // let letvalue2 = 200;
+            }
+            console.log("변수 varvalue1: " + varvalue1);
+            console.log("변수 letvalue1 : " + letvalue1);
+            console.log("변수 varvalue2 : " + varvalue2);
+            // console.log("변수 letvalue2 : " + letvalue2);
+        }
+
+        var varvalue3 = 30;
+        let letvalue3 = 300;
+
+        varvalue3 = 40;
+        letvalue3 = 40;
+
+        // 위의 경우처럼 수를 다시 주는 건 가능
+        //var를 통해 생성한 변수는 재정의가 가능하다.
+        var varvalue3 = 3000; //얘는 변수 재정의 가능
+
+        //let은 변수 재정의 불가능.
+        // let letvalue3=200 ;  얘는 불가능.
+
+        //그러나 변수를 재정의하는 것이 좋은 것은 아님.
+
+        func1();
+
+        // 함수 내부의 변수를 함수 외부에서 접근할 수 없음.
+        // console.log(letvalue1); // 여기서 발생하면 이 뒤부터는 아예 실행치않음
+        // console.log(varvelue1);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
