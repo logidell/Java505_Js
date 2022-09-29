@@ -12,11 +12,17 @@ console.log("a+b =" + a * b);
 console.log("a+b =" + a / b);
 console.log("a+b =" + a % b);
 //es6 ver 추가
-console.log("a+b =" + a ** b);
-console.log(" a++" + a);
+console.log("a ** b = " + a ** b);
+console.log("a * a * a = " + a * a * a);
 a++;
-console.log(" a--" + a);
+console.log("a++ = " + a);
+++a;
+console.log("++a = " + a);
+--a;
+console.log("--a = " + a);
 a--;
+console.log("a-- = " + a);
+
 console.log("a=100;" + (a = 100));
 console.log("a=100;" + (a += 10));
 console.log("a=100;" + (a -= 10));
@@ -29,6 +35,7 @@ console.log("==============================")
 
 c = "문자열" + " 연결" + "연산자";
 console.log('"문자열" + " 연결" + "연산자"' + c);
+
 console.log("=============================")
 
 console.log("10 == 5 :" + (10 == 5));

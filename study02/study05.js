@@ -69,12 +69,12 @@ console.log("\n")
 // parseInt() : 문자열 데이터 타입 숫자를 숫자 (정수데이터)로 변환한다.
 //      사용법 : 변수 = parseInt(데이터);
 
-console.log(`parseInt(-10) : ${parseInt("-10")}`);
-console.log(`parseInt(-10.33) : ${parseInt("-10.33")}`);
-console.log(`parseInt("10.33") : ${parseInt("10.33")}`);
-console.log(`parseInt("10 20 30") : ${parseInt("10 20 30")}`);
-console.log(`parseInt("10year") : ${parseInt("10year")}`);
-console.log(`parseInt("year10") : ${parseInt("year10")}`);
+console.log(`parseInt(-10) : ${parseInt("-10")}`);  //output: -10
+console.log(`parseInt(-10.33) : ${parseInt("-10.33")}`);  //output: -10
+console.log(`parseInt("10.33") : ${parseInt("10.33")}`);  //output: 10
+console.log(`parseInt("10 20 30") : ${parseInt("10 20 30")}`);  //output: 10
+console.log(`parseInt("10year") : ${parseInt("10year")}`);  //output: 10
+console.log(`parseInt("year10") : ${parseInt("year10")}`);  //output: NaN
 // parseFloat() : 문자열 데이터 타잆 숫자를 숫자 (실수 데이터)로 변환한다.
 //      사용법 : 변수 = parseFloat(데이터);
 
@@ -82,15 +82,14 @@ console.log("\n")
 
 console.log("===========parseFloat===========")
 console.log("\n")
-console.log(`parseFloat(-10) : ${parseFloat("-10")}`);
-console.log(`parseFloat(-10.33) : ${parseFloat("-10.33")}`);
-console.log(`parseFloat("10.33") : ${parseFloat("10.33")}`);
-console.log(`parseFloat("10 20 30") : ${parseFloat("10 20 30")}`);
-console.log(`parseFloat("10year") : ${parseFloat("10year")}`);
-console.log(`parseFloat("year10") : ${parseFloat("year10")}`);
+console.log(`parseFloat(-10) : ${parseFloat("10")}`);  // output : 10
+console.log(`parseFloat(-10.33) : ${parseFloat("10.33")}`);  // output : 10.33
+console.log(`parseFloat("10 20 30") : ${parseFloat("10 20 30")}`);  // output : 10
+console.log(`parseFloat("10year") : ${parseFloat("10year")}`);  // output : 10
+console.log(`parseFloat("year10") : ${parseFloat("year10")}`);  // output : NaN
 
 
 // MAX_VALUE
-console.log(`숫자 데이터의 가장 큰 수 : ${Number.MAX_VALUE}`);
+console.log(`숫자 데이터의 가장 큰 수 : ${Number.MAX_VALUE}`);   //output: 1.7976931348623157e+308
 // MIN_VALUE
-console.log(`숫자 데이터의 가장 작은 수 : ${Number.MIN_VALUE}`);
+console.log(`숫자 데이터의 가장 작은 수 : ${Number.MIN_VALUE}`);  //output: 5e-324
