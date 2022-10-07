@@ -25,26 +25,26 @@ console.log(`${num1} 3의 배수의 갯수`);
 //          남은 커피 00 잔
 
 console.log("============================================")
-let cuf = 300; //돈이 수정되기 때문에 고정값인 const를 사용할 수 없다.
-let cufcount = 10;
-let m = prompt("가지고 있는 금액", "");
-
-while (true) { //for문도 가능하나 while이 깔끔해보이니 while사용
-    console.log("order!")
-    if (cufcount > 0) {
-        if (m >= cuf) {
-            console.log("커피를 판매");
-            cufcount--; //커피갯수 줄이기
-            m = (m - cuf); //돈 빼기  돈 -=300;도 가능
-        } else {
-            console.log("소지금액 부족");
-            break;
-        }
-    } else {
-        console.log("sold out ");
-        break;
-    }
-}
+// let cuf = 300; //돈이 수정되기 때문에 고정값인 const를 사용할 수 없다.
+// let cufcount = 10;
+// let m = prompt("가지고 있는 금액", "");
+//
+// while (true) { //for문도 가능하나 while이 깔끔해보이니 while사용
+//     console.log("order!")
+//     if (cufcount > 0) {
+//         if (m >= cuf) {
+//             console.log("커피를 판매");
+//             cufcount--; //커피갯수 줄이기
+//             m = (m - cuf); //돈 빼기  돈 -=300;도 가능
+//         } else {
+//             console.log("소지금액 부족");
+//             break;
+//         }
+//     } else {
+//         console.log("sold out ");
+//         break;
+//     }
+// }
 
 // for(;;카운트도 증감식도 조건 없이 ;;만 작성. 무한반복 ){}
 // for (let i = 0;true;i++)도 무한반복
@@ -62,53 +62,52 @@ while (true) { //for문도 가능하나 while이 깔끔해보이니 while사용
 // let putconf = 3000; //기존예금
 // let putout = 0;
 
-let inPocket = 0;
-console.log(`안녕하세요, 은행입니다`)
-
-while (true) {
-    console.log(`메뉴를 입력해 주세요`);
-    console.log(`1 : 입금, 2 : 예금 확인, 3 : 출금, 0 : 종료`)
-    let hi = prompt("선택 :`1 : 입금, 2 : 예금 확인, 3 : 출금, 0 : 종료 ", "")
-
-    if (hi == 1) {
-        let putinMoney = prompt("입금할 금액을 입력해 주세요", "");
-        if (isNaN(putinMoney))
-            console.log("잘못된 입력입니다. 메뉴로 돌아갑니다.");
-        else {
-            putinMoney = Number(putinMoney)
-            inPocket += putinMoney;
-            console.log(`입금한 금액은 ${putinMoney}원 입니다. 입금금액으로 당신의 잔고는 ${inPocket}입니다.`)
-        }
-    } else if (hi == 2) {
-        console.log(`현재 잔고는 ${inPocket} 입니다. `)
-    } else if (hi = 3) {
-        while (true) {
-            let putOut = prompt("출금할 금액을 입력해 주세요", "")
-            if (isNaN(putOut)) {
-                console.log("잘못된 입력입니다. 메뉴로 돌아갑니다.");
-            } else {
-                putOut = Number(putOut);
-                if (putOut > inPocket) {
-                    console.log("출금 금액이 예금 금액보다 많습니다. 모든 예금 금액을 출금합니다. ")
-                    console.log(`출금 금액은 ${inPocket}원 입니다. `);
-                    inPocket = 0;
-                } else {
-                    inPocket -= putOut;
-                    console.log(`출금 금액은 ${putOut}원이며 남은 금액은 ${inPocket}원 입니다. `)
-                }
-                break;
-            }
-        else
-            if (menu == 0) {
-                console.log('저희 java505 은행을 이용해 주셔서 감사합니다.');
-                break;
-            } else {
-                console.log('잘못된 입력입니다.')
-            }
-
-        }
-    }
-}
+// let inPocket = 0;
+// console.log(`안녕하세요, 은행입니다`)
+// //
+// while (true) {
+//     console.log(`메뉴를 입력해 주세요`);
+//     console.log(`1 : 입금, 2 : 예금 확인, 3 : 출금, 0 : 종료`)
+//     let hi = prompt("선택 :`1 : 입금, 2 : 예금 확인, 3 : 출금, 0 : 종료 ", "")
+//
+//     if (hi == 1) {
+//         let putinMoney = prompt("입금할 금액을 입력해 주세요", "");
+//         if (isNaN(putinMoney))
+//             console.log("잘못된 입력입니다. 메뉴로 돌아갑니다.");
+//         else {
+//             putinMoney = Number(putinMoney)
+//             inPocket += putinMoney;
+//             console.log(`입금한 금액은 ${putinMoney}원 입니다. 입금금액으로 당신의 잔고는 ${inPocket}입니다.`)
+//         }
+//     } else if (hi == 2) {
+//         console.log(`현재 잔고는 ${inPocket} 입니다. `)
+//     } else if (hi = 3) {
+//         while (true) {
+//             let putOut = prompt("출금할 금액을 입력해 주세요", "")
+//             if (isNaN(putOut)) {
+//                 console.log("잘못된 입력입니다. 메뉴로 돌아갑니다.");
+//             } else {
+//                 putOut = Number(putOut);
+//                 if (putOut > inPocket) {
+//                     console.log("출금 금액이 예금 금액보다 많습니다. 모든 예금 금액을 출금합니다. ")
+//                     console.log(`출금 금액은 ${inPocket}원 입니다. `);
+//                     inPocket = 0;
+//                 } else {
+//                     inPocket -= putOut;
+//                     console.log(`출금 금액은 ${putOut}원이며 남은 금액은 ${inPocket}원 입니다. `)
+//                 }
+//                 break;
+//             }else
+//             if (menu == 0) {
+//                 console.log('저희 java505 은행을 이용해 주셔서 감사합니다.');
+//                 break;
+//             } else {
+//                 console.log('잘못된 입력입니다.')
+//             }
+//
+//         }
+//     }
+// }
 
 
 // 식이 잘못된 곳이 많음. 수정 필요

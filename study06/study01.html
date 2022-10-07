@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // first(): 지정한 html 태그 중 첫번째 태그를 선택
+        // 사용법 : 태그.first()
+        //last(): 지정한 html 태그 중 마지막 태그를 선택
+        // 사용법 : 태그.last()
+        //  eq(): 지정한 html 태그 중 특정 태그 선택시 인덱스 번호 사용해 선택 시작번호는 0번부터
+        // 사용법 : 태그.eq(index)
+        //  filter(): 지정한 html 태그 중 검색 기준을 만족하는 태그 선택
+        //  사용법 :
+        //  nat() : 지정한 html 태그 중 검색 기준을 만족치 않은 태그
+        // 사용법 : 태그.not
+        $(document).ready(function () {
+            $('#div01 div').first().css({'background-color': 'antiquewhite'});
+            $('#div02 div').last().css({'background-color': 'powderblue'});
+            $('#div03 p').eq(1).css({'background-color': 'lightseagreen'});
+            $('#div04 p').filter('.intro').css({'background-color': 'lightesagreen'});
+            $('#div05 p').not('.intro').css({'background-color': 'lightesagreen'})
+        })
+
+
+    </script>
+    <style>
+        #div01 .box, #div02 .box {
+            border: 1px solid black;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+<div class="container">
+    <div id="div01">
+        <h3>first사용</h3>
+        <div class="box">
+            <p>ㅇ</p>
+            <p>ㅇ</p>
+        </div>
+        <div class="box">
+            <p>ㅇ</p>
+            <p>ㅇ</p>
+        </div>
+        <div class="box">
+            <p>ㅇ</p>
+            <p>ㅇ</p>
+        </div>
+    </div>
+
+    <hr>
+    <br>
+    <hr>
+    <div id="div02">
+        <h3>last사용</h3>
+        <div class="box">
+            <p>b</p>
+            <p>b</p>
+        </div>
+        <div class="box">
+            <p>b</p>
+            <p>b</p>
+        </div>
+        <div class="box">
+            <p>b</p>
+            <p>b</p>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <hr>
+    <div id="div03">
+        <p> 선택할 q 태그 인덱스 0</p>
+        <p> 선택할 q 태그 인덱스 1</p>
+        <p> 선택할 q 태그 인덱스 2</p>
+        <p> 선택할 q 태그 인덱스 3</p>
+        <p> 선택할 q 태그 인덱스 4</p>
+        <p> 선택할 q 태그 인덱스 5</p>
+    </div>
+    <hr>
+    <br>
+    <hr>
+    <div id="div04">
+        <p>filter로 검색할 p태그 중 하나 </p>
+        <p class="intro">filter로 검색할 p태그 중 하나 </p>
+        <p>선택안됨 </p>
+        <p class="intro ">filter로 검색할 p태그 중 하나 </p>
+        <p>선택안됨</p>
+
+    </div>
+    <hr>
+    <br>
+    <hr>4
+    <div id="div05">
+        <h3> not 사용</h3>
+        <p>not 검색할 p태그 중 하나 </p>
+        <p class="intro">not 으로 제거할 태그 </p>
+        <p>선택안됨 </p>
+        <p class="intro">not으로 제거할 태그 </p>
+        <p>선택안됨</p>
+
+    </div>
+
+</div>
+</body>
+</html>

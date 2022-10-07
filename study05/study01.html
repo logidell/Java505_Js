@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#div01-btn01').on('click', function () {
+                let txt = $('#div01-p').text();
+                alert(txt); //태그의 시작태그와 끝 사이의 내용을 가져온다. 코드만 있더라도 글자만 가져온다.
+            });
+            $('#div01-btn02').on('click', function () {
+                let txt = $('#div01-p').html(); // 코드까지 전부 가져온다.
+                alert(txt);
+            });
+            $('#div01-btn03').on('click', function () {
+                let txt = $('#div01-input').val();
+                alert(txt);// 지정한 태그의 value 속성에 지정해둔 글자만 가져온다.
+            });
+            $('#div01-btn04').on('click', function () {
+                alert($('#div01-test1').val()); // value 속성의 글자를 가져오는 것임.
+            });
+            $('#div01-btn05').on('click', function () {
+                alert($('#div01-test2').val());// 여기서 글자를 가져오려면 text()를 가져와야 한다. 이대로 사용시 공백이다.
+            });
+
+
+            $('#div02-btn01').on('click', function () {
+                let txt = "text() 클릭시 변경된 내용"
+                $('#div02-p1').text(txt);
+
+            });
+            $('#div02-btn02').on('click', function () {
+                let txt = "<b>html()</b> <i>클릭시</i> 변경된 내용"
+                $('#div02-p1').html(txt);
+
+            });
+            $('#div02-btn03').on('click', function () {
+                let txt = "vla() 클릭 시 변경된 내용"
+                $('#div02-input').val(txt);
+            });
+
+            $('#div03-btn01').on('click', function () {
+                let link = $('#div03-link').attr('harf');
+                alert('atrr로 가져온 내용')
+
+            })
+            $('#div03-btn02').on('click', function () {
+                const link = 'https://www.daum.net/'
+                $('#div03-link').attr('href', link);
+                alert('변경완료');
+
+            })
+            $('#div03-btn03').on('click', function () {
+                $('#div03-img').attr({
+                    src: 'imgF/yo.jpg',
+                    width : '400',
+                    height : '300'
+                });
+
+            })
+
+
+        });
+    </script>
+
+
+</head>
+<body>
+<div class="container">
+    <div id="div01">
+        <p id="div01-p">아래의 버튼을 클릭하면 <b>굵은</b> 글자로 되어 있는 부분이 알림창에 표시된다. </p>
+        <input type="text" id="div01-input" class="form-control" value="value 사용시 가져올 글자 ">
+        <br><br>
+        <input type="button" value="input 태그에 표시되고 있는 글자" class="btn btn-success" id="div01-test1">
+        <button type="button" class="btn btn-success" id="div01-test2">button 태그에 표시되고 있는 글자</button>
+        <br><br>
+
+        <button id="div01-btn01" class="btn btn-secondary">text 사용</button>
+        <button id="div01-btn02" class="btn btn-warning">html 사용</button>
+        <button id="div01-btn03" class="btn btn-danger">val() 사용</button>
+        <br><br>
+        <button id="div01-btn04" class="btn btn-primary">Input태그에서 가져오기</button>
+        <button id="div01-btn05" class="btn btn-primary">button태그에서 가져오기</button>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <div id="div02">
+        <p id="div02-p1">아래의 버튼 클릭 시 내용이 변경될 p 태그</p>
+        <input type="text" id="div02-input" class="form-control" value="버튼 클릭시 내용이 변경될 input tag">
+        <br> <br>
+        <button id="div02-btn01" class="btn btn-outline-primary">text() 사용하기</button>
+        <button id="div02-btn02" class="btn btn-outline-success">html() 사용하기</button>
+        <button id="div02-btn03" class="btn btn-outline-info">val() 사용하기</button>
+        <br>
+        <hr>
+        <br>
+
+        <div id="div03">
+            <a href="https://www.naver.com/" id="div03-link">naver homepage</a>
+            <img id="div03-img" src="imgF/yousei-01_s_400x400.jpg" width="200" height="200"><br>
+<!--            <img src="imgF/yo.jpg" width="300 height="200">-->
+            <p id="div03-p">버튼 클릭시 속성이 변경될 p태그</p>
+            <button id="div03-btn01" class="btn btn-primary">attr()로 속성값 가져오기</button>
+            <button id="div03-btn02" class="btn btn-primary">attr()로 속성값 설정하기</button>
+            <button id="div03-btn03" class="btn btn-success">attr()로 속성값 여러개 설정하기</button>
+
+        </div>
+
+
+    </div>
+
+</div>
+</body>
+</html>

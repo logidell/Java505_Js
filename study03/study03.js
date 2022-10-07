@@ -94,12 +94,3 @@ let a = quiz3_input;
 
 quiz3_input(a);
 
-//  문제7 문제 4의 소스코드를 함수를 사용하는 방식으로 수정
-//  1. money, caffee, price 의 초기값을 설정하는 함수 생성 quiz7Setup
-//  2. 커피 판매부분을 함수로 생성하기 quiz7CoffeeSale
-
-// 문제8 문제 5의 소스코드를 함수를 사용하는 방식으로 수정하세요
-// 1. 입금 부분을 함수로 생성 quiz8InputMoney
-// 2. 예금 확인 부분을 함수로 생성 quiz8CheckMoeny
-// 3. 출금 부분을 함수로 생성 quiz8OutputMoney
-
